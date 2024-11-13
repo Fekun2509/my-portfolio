@@ -1,0 +1,28 @@
+.eduContainer {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .certificateContainer {
+        width: 90vw;
+        height: 90vh;
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+
+        .certificate {
+            width: 44vw;
+            height: 90vh;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+    }
+}

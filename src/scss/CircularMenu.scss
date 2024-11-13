@@ -1,0 +1,118 @@
+.radialContainer {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .radialMenu {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: #1f1f1f;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #f0f0f0;
+        transform: translate(0, 150px);
+        opacity: 0;
+
+        .rootButton {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 5px #f0f0f0;
+            cursor: pointer;
+
+            // margin: auto;
+            .crossButton {
+                max-width: 30px;
+                max-height: 30px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+
+        .menuItem {
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #f0f0f0;
+            background: #111;
+            cursor: pointer;
+        }
+
+        // /* Top */
+        .menuItem:nth-child(2) {
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .squareButton {
+                max-width: 40px;
+                max-height: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        // /* Top-right */
+        .menuItem:nth-child(3) {
+            top: 40%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+
+            .triangleButton {
+                max-width: 45px;
+                max-height: 45px;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Top-left */
+        .menuItem:nth-child(4) {
+            top: 40%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+
+            .circleButton {
+                max-width: 45px;
+                max-height: 45px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+
+    }
+
+    .toggleMenu {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -110%);
+        background-image: url("../images/toggle\ \(2\).png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,106 @@
+.projectContainer {
+    background-color: #1f1f1f;
+    margin: 0;
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        /* 3 columns: left, middle, right */
+        grid-template-rows: repeat(3, 1fr);
+        /* 3 rows */
+        gap: 10px;
+        width: 100vw;
+        height: 100vh;
+
+        .centerArea {
+            grid-row: 1 / 4;
+            /* Spanning 3 rows in the middle */
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+
+        .centerText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .centerText h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 4em;
+            color: #f0f0f0;
+        }
+
+        .left-row,
+        .right-row {
+            background-color: #111;
+            border-radius: 1%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2rem;
+            animation: animate 1s linear infinite;
+            box-shadow: 0 0 30px green,
+                0 0 30px deepskyblue;
+            z-index: 998;
+
+        }
+
+        .left-row:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .left-row:nth-child(2) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .left-row:nth-child(3) {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .right-row:nth-child(5) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .right-row:nth-child(6) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .right-row:nth-child(7) {
+            grid-column: 3;
+            grid-row: 3;
+        }
+    }
+
+
+    @keyframes animate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+}
