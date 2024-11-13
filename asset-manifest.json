@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.7b0fc38d.css",
-    "main.js": "/my-portfolio/static/js/main.d9dc4fb0.js",
+    "main.css": "/my-portfolio/static/css/main.004e72f4.css",
+    "main.js": "/my-portfolio/static/js/main.f0a8b34f.js",
     "static/js/453.93dfebf8.chunk.js": "/my-portfolio/static/js/453.93dfebf8.chunk.js",
     "static/media/Coffee1.png": "/my-portfolio/static/media/Coffee1.8322fe8a8b369529cd1b.png",
     "static/media/Coffee3.png": "/my-portfolio/static/media/Coffee3.793aba8a86697ed464af.png",
@@ -64,12 +64,12 @@
     "static/media/Logo_KOI-removebg-preview (1).png": "/my-portfolio/static/media/Logo_KOI-removebg-preview (1).2ac0bbd5c64debab48c3.png",
     "static/media/square color (1).png": "/my-portfolio/static/media/square color (1).81c765b419504e47e3f4.png",
     "index.html": "/my-portfolio/index.html",
-    "main.7b0fc38d.css.map": "/my-portfolio/static/css/main.7b0fc38d.css.map",
-    "main.d9dc4fb0.js.map": "/my-portfolio/static/js/main.d9dc4fb0.js.map",
+    "main.004e72f4.css.map": "/my-portfolio/static/css/main.004e72f4.css.map",
+    "main.f0a8b34f.js.map": "/my-portfolio/static/js/main.f0a8b34f.js.map",
     "453.93dfebf8.chunk.js.map": "/my-portfolio/static/js/453.93dfebf8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b0fc38d.css",
-    "static/js/main.d9dc4fb0.js"
+    "static/css/main.004e72f4.css",
+    "static/js/main.f0a8b34f.js"
   ]
 }
