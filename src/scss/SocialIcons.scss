@@ -1,0 +1,216 @@
+.content-center {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+
+        li {
+            margin: 3px;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                /* Removes underline */
+                i {
+                    transition: all 0.3s linear;
+                }
+
+            }
+
+        }
+
+        li::after {
+            content: "";
+            position: absolute;
+            height: inherit;
+            width: inherit;
+            border-radius: 3px;
+            background-color: #f0f0f0;
+            opacity: 0;
+            z-index: -1;
+            color: #fff;
+            transition: all 0.3s linear;
+        }
+
+        li:hover i {
+            color: #1f1f1f;
+            font-size: 17px
+        }
+
+        li:hover::after {
+            opacity: 1;
+            transform: scale(0.8)
+        }
+
+        li:nth-child(1) {
+            border: 2px solid #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(1)::after {
+            background-color: #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(2) {
+            border: 2px solid #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(2)::after {
+            background-color: #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(3) {
+            border: 2px solid #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(3)::after {
+            background-color: #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(4) {
+            border: 2px solid #f0f0f0;
+            color: #f0f0f0
+        }
+
+        li:nth-child(4)::after {
+            background-color: #f0f0f0;
+            color: #f0f0f0
+        }
+    }
+
+
+}
+
+.bottom {
+    left: 6%;
+    top: 100%;
+    transform: translateY(-150%);
+}
+
+.center {
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -100%);
+}
+
+@media (max-width:600px) {
+    .content-center {
+        height: auto;
+        // top: 100%;
+        // transform: translateY(-200%);
+
+        ul {
+            // display: block;
+            padding: 0;
+
+            li {
+                height: 20px;
+                width: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    .fa-2x {
+                        font-size: 1em;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom {
+        transform: translateY(-200%);
+    }
+
+}
+
+
+@media (min-width: 601px) and (max-width:768px) {
+    .content-center {
+        height: auto;
+        // top: 100%;
+        // transform: translateY(-200%);
+
+        ul {
+            // display: block;
+            padding: 0;
+
+            li {
+                height: 20px;
+                width: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    .fa-2x {
+                        font-size: 1em;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom {
+        transform: translateY(-200%);
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width:1024px) {
+    .content-center {
+        height: auto;
+        // top: 100%;
+        // transform: translateY(-200%);
+
+        ul {
+            // display: block;
+            padding: 0;
+
+            li {
+                height: 20px;
+                width: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    .fa-2x {
+                        font-size: 1em;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom {
+        transform: translateY(-200%);
+    }
+
+}

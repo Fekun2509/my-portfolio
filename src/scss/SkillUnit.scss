@@ -1,0 +1,34 @@
+.skillUnit {
+    padding-bottom: 5px;
+
+    .skillTitle {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1em;
+
+        span {
+            width: 40px;
+            height: 40px;
+            // background-color: green;
+
+            img {
+                width: 100%;
+                height: 100%;
+                // filter: drop-shadow(2px 2px 0px white);
+            }
+        }
+    }
+
+    .profiencyBar {
+        width: 100%;
+        border: 1px solid #f0f0f0;
+        background-color: #f0f0f0;
+
+        .profiency {
+            // width: 80%;
+            height: 10px;
+            background-color: #1f1f1f;
+        }
+    }
+}

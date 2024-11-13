@@ -3,7 +3,11 @@ import "../scss/FrontPage.scss";
 import { TextPlugin } from "gsap/all";
 import gsap from "gsap";
 import JumpingSign from "./JumpingSign";
-
+import { SocialIcons } from "./SocialIcons";
+import Scroll from "./Scroll";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { updatePosition } from "../redux/slices/socialIconSlice";
 
 export default function FrontPage() {
     gsap.registerPlugin(TextPlugin);
@@ -15,6 +19,9 @@ export default function FrontPage() {
     let iam = React.useRef(null);
     let uName = React.useRef(null);
     let description = React.useRef(null);
+
+
+
 
     React.useEffect(() => {
 
@@ -56,7 +63,7 @@ export default function FrontPage() {
                     // Kill the first tween after the second tween is complete
                     gsap.delayedCall(2, () => {
                         gsap.getById("hello_cur").kill();
-                        hello_.style.opacity = "0";
+                        // hello_.style.opacity = "0";
                     });
                 }
             }).to(role_, {
@@ -99,7 +106,6 @@ export default function FrontPage() {
 
 
             const roleResult = wordArray.filter(role => role.name === "role");
-            console.log(roleResult)
             roleResult.forEach(element => {
                 const forwardTween = gsap.to(role, {
                     duration: 2,
@@ -120,7 +126,7 @@ export default function FrontPage() {
 
     return (
         <>
-            <div className="frontPageContainer panel">
+            <div id="frontPage" className="frontPageContainer panel">
                 <div className="headerContainer">
                     <div className="left-div">
                         <div className="hello">
@@ -146,6 +152,8 @@ export default function FrontPage() {
                         {/* <image src="../images/RemovedBackground.png" /> */}
                     </div>
                 </div>
+                <SocialIcons position={'bottom'}></SocialIcons>
+                <Scroll></Scroll>
                 <JumpingSign></JumpingSign>
             </div>
 

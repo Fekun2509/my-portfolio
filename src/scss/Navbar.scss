@@ -1,40 +1,259 @@
-nav {
-    height: 80px;
-    width: 100vw;
-    /* overflow: hidden; */
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    z-index: 999;
+.navBar {
+    position: relative;
+    z-index: 99999;
 
-    ul {
-        list-style: none;
-        overflow: hidden;
-        background-color: #000;
+    .toggleButton {
+        position: fixed;
+        height: 60px;
+        width: 60px;
+        color: #f0f0f0;
+        z-index: 1000;
+        font-size: 1.5em;
+        left: 12vw;
+        display: none;
+        // opacity: 0;
+    }
+
+
+
+    .horizonNav {
+        height: 60px;
+        width: 100vw;
+        /* overflow: hidden; */
+        position: fixed;
         margin: 0;
         padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        top: 0;
+        z-index: 999;
+
+        // display: none;
+
+        ul {
+            list-style: none;
+            overflow: hidden;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 60px;
+
+            .navItem.active {
+                background-color: #f0f0f0;
+                color: #000
+            }
+
+            li {
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+                text-decoration: none;
+                height: 60px;
+                min-width: 10vw;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            li:hover {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+
+            .icon {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navItem:not(:first-child) {
+                display: none
+            }
+
+            .navItem:first-child {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+            }
+
+            ul {
+                display: block;
+            }
+
+        }
+
+        @media (min-width: 601px) and (max-width: 768px) {
+            .navItem:not(:first-child) {
+                display: none
+            }
+
+            .navItem:first-child {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+            }
+
+            ul {
+                display: block;
+            }
+
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .navItem:not(:first-child) {
+                display: none
+            }
+
+            .navItem:first-child {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+            }
+
+            ul {
+                display: block;
+            }
+
+        }
+
+
     }
 
-    li {
-        float: left;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        text-decoration: none;
-        height: 60px;
-        min-width: 10vw;
-        font-size: 24px;
-        font-weight: 600;
+    .verticalNav {
+        width: 40vw;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        top: 8vh;
+        z-index: 999;
+        left: 10vw;
+        // opacity: 0;
+        display: none;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.2s ease;
+
+        ul {
+            border-radius: 5px;
+            background-color: #000;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            // position: absolute;
+            // left: 20%;
+
+            .navItem.active {
+                background-color: #f0f0f0;
+                color: #000
+            }
+
+            li {
+                // float: left;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFFFFF;
+                text-decoration: none;
+                // height: 60px;
+                width: 100%;
+                font-size: 24px;
+                font-weight: 600;
+                flex: 1;
+
+
+            }
+        }
     }
 
-    li:hover {
-        background-color: white;
-        color: black;
-        cursor: pointer;
+    @media screen and (max-width: 600px) {
+        .verticalNav {
+            display: block;
+            // top: 6vh;
+
+            ul {
+                li {}
+
+                li:hover {
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .toggleButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .open {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        .verticalNav {
+            display: block;
+            top: 6vh;
+
+            ul {
+                li {}
+
+                li:hover {
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .toggleButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .open {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .verticalNav {
+            display: block;
+            top: 5vh;
+
+            ul {
+                li {}
+
+                li:hover {
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .toggleButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .open {
+            height: 300px;
+        }
     }
 }
